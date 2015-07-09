@@ -4,10 +4,10 @@ echo "The shellscript for modifying of network settings."
 
 
 
-echo -n "Input ip addr to set："
+echo -n "Input ip addr to set:"
 read ipaddr
 
-echo -n "Input mac addr to set："
+echo -n "Input mac addr to set:"
 read macaddr
 
 sed -i -e "s/^IPADDR$/IPADDR=$ipaddr/" /etc/sysconfig/network-scripts/ifcfg-eth0 
