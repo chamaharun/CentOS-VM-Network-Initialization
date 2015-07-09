@@ -18,3 +18,5 @@ sed -i -e "s/^HWADDR=00:00:00:00:00:00$/HWADDR=$macaddr/" /etc/sysconfig/network
 
 perl -pe "s/# net device ()\nSUBSYSTEM==\"net\", ACTION==\"add\", DRIVERS==\"?*\", ATTR{address}==\"00:15:5d:0b:c8:04\", ATTR{type}==\"1\", KERNEL==\"eth*\", NAME=\"eth0\"//g" /etc/udev/rules.d/70-persistent-net.rules
 perl -pe "s/eth1/eth0/g" /etc/udev/rules.d/70-persistent-net.rules
+
+service network restart
